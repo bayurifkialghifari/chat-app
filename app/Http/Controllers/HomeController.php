@@ -16,7 +16,6 @@ class HomeController extends Controller
     public function index()
     {
         $users = User::all();
-        event(new ChatEvent('room', 'message', 'sender'));
 
         return view('home', compact('users'));
     }
